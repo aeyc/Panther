@@ -1,0 +1,60 @@
+begin
+	#thisisacomment#
+        num moveCount
+	boolean anything
+	boolean toBeCompared
+ 	moveCount = 0
+	num input
+	scan(input)
+#line 7#
+	num tmpL
+	tmpL = 1
+	num rr
+	rr = 15
+        while tmpL < 10 then
+         	if rr > 10 then
+        		turn( 90 )
+			rr = rr - 2
+			readData(rr)
+                end_if   
+                move
+                moveCount = moveCount + 1
+		tmpL = tmpL +1
+	end_while
+        turn( 90 )
+#23#    
+
+        num left
+	readData( left )
+        num right 
+	right = 10010
+	readData( right )
+#30#
+        while left > 10 then
+                move
+                moveCount = moveCount + 1
+                if left != right then
+                        turn( 270 )
+                end_if
+        end_while
+        if left != right then
+                grab
+        end_if
+        turn( 180 )
+#42#
+        readData( 4 )
+        readData( 2 )
+	num tmp
+	tmp = 100
+        while tmp > 10 then
+                move
+                moveCount = moveCount + 1
+                if left != tmp then
+                        turn( 270 )
+                end_if
+#53#
+		tmp = tmp - 10
+        end_while
+	print( moveCount)
+      	release
+end
